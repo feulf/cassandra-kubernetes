@@ -21,10 +21,10 @@ This will create a Kubernetes pod containing a single Cassandra node. You can us
 
 ## Scaling the Cluster
 
-To launch more Cassandra nodes and have them join the cluster, simply scale the [Cassandra replication controller](cassandra-replication-controller.yml):
+To launch more Cassandra nodes and have them join the cluster, simply scale the [Cassandra stateful set](cassandra-stateful-set.yml):
 
 ```sh
-kubectl scale rc cassandra --replicas=2
+kubectl scale statefulset cassandra --replicas=2
 ```
 
 A new pod is created...
@@ -73,7 +73,7 @@ If the [Kubernetes DNS addon](https://github.com/kubernetes/kubernetes/tree/mast
 
 ## Configuration Options
 
-The following environment variables can be configured in the [Cassandra replication controller definition](cassandra-replication-controller.yml):
+The following environment variables can be configured in the [Cassandra stateful set definition](cassandra-stateful-set.yml):
 
 ```sh
 env:
