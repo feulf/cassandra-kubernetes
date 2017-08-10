@@ -24,7 +24,7 @@ This will create a Kubernetes pod containing a single Cassandra node. You can us
 To launch more Cassandra nodes and have them join the cluster, simply scale the [Cassandra stateful set](cassandra-stateful-set.yml):
 
 ```sh
-kubectl scale rc cassandra --replicas=2
+kubectl scale statefulset cassandra --replicas=2
 ```
 
 A new pod is created...
